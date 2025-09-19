@@ -14,7 +14,6 @@ namespace CopilotTest
             {
                  string message = statusCode switch
                  {
-                     200 => "OK",
                      400 => "Bad Request",
                      401 => "Unauthorized",
                      404 => "Not Found",
