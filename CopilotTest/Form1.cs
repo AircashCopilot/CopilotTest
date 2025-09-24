@@ -12,6 +12,7 @@ namespace CopilotTest
             // Try to parse the textbox input as an integer
             if (int.TryParse(textBoxMessage.Text, out int statusCode))
             {
+                int b = 3;
                 string message;
                 if (statusCode == 200)
                 {
