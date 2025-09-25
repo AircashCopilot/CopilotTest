@@ -20,7 +20,7 @@ namespace CopilotTest
                      401 => "Unauthorized",
                      404 => "Not Found",
                      500 => "Internal Server Error",
-                     _ => "Unknown Status"
+                     _ => test1
                  };
                  textBoxMessage.Text = message;                           
             }
