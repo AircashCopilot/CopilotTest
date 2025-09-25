@@ -9,7 +9,6 @@ namespace CopilotTest
 
         private void buttonShowMessage_Click(object sender, EventArgs e)
         {
-            string test1 = "Unknown Status";
             // Try to parse the textbox input as an integer
             if (int.TryParse(textBoxMessage.Text, out int statusCode))
             {
@@ -20,7 +19,7 @@ namespace CopilotTest
                      401 => "Unauthorized",
                      404 => "Not Found",
                      500 => "Internal Server Error",
-                     _ => test1
+                     _ => "Unknown Status"
                  };
                  textBoxMessage.Text = message;                           
             }
