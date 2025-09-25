@@ -9,6 +9,7 @@ namespace CopilotTest
 
         private void buttonShowMessage_Click(object sender, EventArgs e)
         {
+            string test1 = "Hello, World!";
             // Try to parse the textbox input as an integer
             if (int.TryParse(textBoxMessage.Text, out int statusCode))
             {
