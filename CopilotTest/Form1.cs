@@ -13,7 +13,7 @@ namespace CopilotTest
             if (int.TryParse(textBoxMessage.Text, out int statusCode))
             {
                 //this is a string variable
-                 string message = statusCode switch
+                 string statusMessage = statusCode switch
                  {
                      200 => "OK",
                      400 => "Bad Request",
@@ -22,7 +22,7 @@ namespace CopilotTest
                      500 => "Internal Server Error",
                      _ => "Unknown Status"
                  };
-                 textBoxMessage.Text = message;                           
+                 textBoxMessage.Text = statusMessage;                           
             }
             else
             {
