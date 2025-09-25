@@ -12,32 +12,21 @@ namespace CopilotTest
             // Try to parse the textbox input as an integer
             if (int.TryParse(textBoxMessage.Text, out int statusCode))
             {
-                string message;
-                if (statusCode == 200)
-                {
-                    message = "OK";
-                }
-                else if (statusCode == 400)
-                {
-                    message = "Bad Request";
-                }
-                else if (statusCode == 404)
-                {
-                    message = "Not Found";
-                }
-                else if (statusCode == 500)
-                {
-                    message = "Internal Server Error";
-                }
-                else
-                {
-                    message = "Unknown Status";
-                }
-                textBoxMessage.Text = message;
+                //this is a string variable
+                 string myStatusCode = statusCode switch
+                 {
+                     200 => "OK",
+                     400 => "Bad Request",
+                     401 => "Unauthorized",
+                     404 => "Not Found",
+                     500 => "Internal Server Error",
+                     _ => "Unknown Status"
+                 };
+                 textBoxMessage.Text = myStatusCode;                           
             }
             else
             {
-                textBoxMessage.Text = "Please enter a valid status code! (e.g., 200, 400, 404, 500).";
+                textBoxMessage.Text = "Please enter a valid status code (e.g., 200, 400, 404, 500).";
             }
         }
     }
