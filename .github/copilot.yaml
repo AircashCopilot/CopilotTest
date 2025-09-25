@@ -45,3 +45,14 @@ rules:
       bad:
         - |
           string test1 = "OK";
+
+  - name: Disallow string variable named 'test2'
+    description: Do not use 'test2' as a variable name for string variables.
+    severity: error
+    examples:
+      good:
+        - |
+          string statusText = "OK";
+      bad:
+        - |
+          string test2 = "OK";
