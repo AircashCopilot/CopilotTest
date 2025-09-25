@@ -5,3 +5,4 @@
    - Ensure all new services implement an interface.
    - Pay special attention to error handling and input validation.
    - Review for clear and concise XML documentation on public methods.
+   - Button click method names should end with `_Click1`.
